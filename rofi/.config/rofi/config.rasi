@@ -1,0 +1,12 @@
+configuration {
+    modi: "drun,run";
+    kb-accept-entry: "space,Return";    
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+
+//@theme "~/.config/rofi/themes/DarkBlue.rasi"
+
+@theme "/home/ravindufr/.config/rofi/themes/DarkBlue.rasi"

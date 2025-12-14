@@ -1,0 +1,14 @@
+#!/bin/bash
+
+options="Shutdown\nRestart\nLogout\nSleep\nLock"
+
+chosen=$(echo -e "$options" | rofi -dmenu -theme ~/.config/rofi/themes/powermenu.rasi)
+
+case "$chosen" in
+    "Shutdown") systemctl poweroff ;;
+    "Restart") systemctl reboot ;;
+    "Logout") i3-msg exit ;;
+    "Sleep") systemctl suspend ;;
+    "Lock") i3lock ;;
+esac
+

@@ -1,0 +1,51 @@
+[global]
+    monitor = 0
+    follow = mouse
+    geometry = "300x5-20+40"
+    transparency = 0
+    frame_width = 2
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 10
+    corner_radius = 8
+    font = JetBrainsMono 10
+    line_height = 0
+
+    # Colors
+    background = "#0b1011"
+    foreground = "#c9d1c3"
+    frame_color = "#51564c"
+
+    # Icon and formatting
+    icon_position = left
+    max_icon_size = 48
+    markup = full
+
+    # Timeout
+    timeout = 5
+    idle_threshold = 120
+
+    # Misc
+    show_indicators = no
+    word_wrap = yes
+    ignore_newline = no
+    sort = yes
+    shrink = yes
+
+[urgency_low]
+    background = "#0b1011"
+    foreground = "#c9d1c3"
+    frame_color = "#51564c"
+    timeout = 5
+
+[urgency_normal]
+    background = "#0b1011"
+    foreground = "#c9d1c3"
+    frame_color = "#51564c"
+    timeout = 5
+
+[urgency_critical]
+    background = "#0b1011"
+    foreground = "#c9d1c3"
+    frame_color = "#c94f4f"
+    timeout = 0

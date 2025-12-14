@@ -1,0 +1,6 @@
+.cache/
+.config/google-chrome/
+.config/discord/
+.config/Code/
+*.log
+*.lock
