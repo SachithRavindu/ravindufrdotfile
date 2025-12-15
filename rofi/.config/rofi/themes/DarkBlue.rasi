@@ -5,8 +5,8 @@
  */
 
 * {
-    selected-normal-foreground:  rgba ( 2, 20, 63, 100 % );
-    foreground:                  rgba ( 219, 223, 188, 100 % );
+    foreground:                  #d7dde8;
+    selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 0, 0, 0, 0 % );
     red:                         rgba ( 220, 50, 47, 100 % );
@@ -18,12 +18,12 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 2, 20, 63, 100 % );
     alternate-active-background: rgba ( 0, 0, 0, 0 % );
-    background:                  rgba ( 0, 0, 33, 87 % );
+    background:                  #23282f;
     bordercolor:                 rgba ( 219, 223, 188, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 208, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 219, 223, 188, 100 % );
+    selected-normal-background:  #353b45;
     border-color:                @foreground;
     spacing:                     2;
     separatorcolor:              rgba ( 219, 223, 188, 100 % );
@@ -37,20 +37,21 @@
 }
 window {
     background-color: @background;
-    border:           1;
+    border:          0;
     padding:          5;
     children: [mainbox];
     border-radius:10px;
+    width:450px;
 }
 mainbox {
     border:  0;
     padding: 10px;
-    children: [inputbar, message, listview, mode-switcher];
+    children: [inputbar, listview];
 
     }
 message {
     border:       2px 0px 0px ;
-    border-color: @separatorcolor;
+    border-color: @background;
     padding:      1px ;
 }
 textbox {
@@ -58,15 +59,18 @@ textbox {
 }
 listview {
     fixed-height: 0;
-    border:       2px 0px 0px ;
+    border:       0px 0px 0px ;
     border-color: @separatorcolor;
-    spacing:      2px ;
+    spacing:      5px ;
     scrollbar:    true;
-    padding:      2px 0px 0px ;
+    padding:      10px 0px 0px ;
 }
 element {
     border:  0;
-    padding: 1px ;
+    margin:0px 0px 0px 10px;
+    padding: 3px 15px 3px 15px;
+    border-radius:10px;
+
 }
 element-text {
     background-color: inherit;
@@ -124,8 +128,10 @@ button.selected {
 }
 inputbar {
     spacing:    0;
+    background-color: @selected-normal-background;
     text-color: @normal-foreground;
-    padding:    1px ;
+    padding:    8px 12px 8px 12px ;
+    border-radius:10px;
 }
 case-indicator {
     spacing:    0;
@@ -140,7 +146,7 @@ prompt, button{
     text-color: @normal-foreground;
 }
 inputbar {
-        children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];	
+        children:   [entry,case-indicator ];	
 }
 textbox-prompt-colon {
     expand:     false;

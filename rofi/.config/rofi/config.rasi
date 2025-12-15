@@ -1,9 +1,9 @@
 configuration {
-    modi: "drun,run";
+    modi: "drun";
     kb-accept-entry: "space,Return";    
     show-icons: true;
     icon-theme: "Papirus";
-    font: "JetBrainsMono Nerd Font 10";
+    font: "SpaceMono Nerd Font Mono 10";
 }
 
 

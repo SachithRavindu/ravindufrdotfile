@@ -1,19 +1,19 @@
 #!/bin/bash
 
-PLAYER="spotify"  # Make sure `playerctl -l` shows "spotify"
-FORMAT="{{ title }} - {{ artist }}"
+# Get metadata from any MPRIS player
+STATUS=$(playerctl status 2>/dev/null)
 
-while true; do
-    STATUS=$(playerctl --player=$PLAYER status 2>/dev/null)
+if [[ "$STATUS" == "Playing" || "$STATUS" == "Paused" ]]; then
+    ARTIST=$(playerctl metadata artist 2>/dev/null)
+    TITLE=$(playerctl metadata title 2>/dev/null)
 
-    if [ $? -ne 0 ]; then
-        echo "No player"
-    elif [ "$STATUS" = "Playing" ] || [ "$STATUS" = "Paused" ]; then
-        playerctl --player=$PLAYER metadata --player=$PLAYER --format "$FORMAT"
+    if [[ -n "$ARTIST" && -n "$TITLE" ]]; then
+        echo "$TITLE - $ARTIST"
     else
-        echo "No music"
+        echo "Playing"
     fi
+else
+    echo ""
+fi
 
-    sleep 1
-done
 
