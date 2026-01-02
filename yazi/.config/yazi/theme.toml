@@ -1,0 +1,157 @@
+"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+# : Manager {{{
+[mgr]
+cwd = { fg = "#d7dde8" }
+
+# Hovered
+hovered         = { fg = "#d7dde8", reversed = true }
+preview_hovered = { fg = "#d7dde8", underline = true }
+
+# Find
+find_keyword  = { fg = "yellow", bold = true, italic = true, underline = true }
+find_position = { fg = "magenta", bg = "reset", bold = true, italic = true }
+
+# Symlink
+symlink_target = { fg = "#d7dde8", italic = true }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "gray" }
+
+syntect_theme = ""
+# : }}}
+
+# : Tabs {{{
+[tabs]
+active   = { fg = "#d7dde8", bg = "blue", bold = true }
+inactive = { fg = "#d7dde8", bg = "gray" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+# : }}}
+
+# : Status bar {{{
+[status]
+overall   = { fg = "#d7dde8" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Permissions
+perm_sep   = { fg = "darkgray" }
+perm_type  = { fg = "#d7dde8" }
+perm_read  = { fg = "#d7dde8" }
+perm_write = { fg = "#d7dde8" }
+perm_exec  = { fg = "#d7dde8" }
+
+# Progress
+progress_label  = { fg = "#d7dde8", bold = true }
+progress_normal = { fg = "#d7dde8", bg = "black" }
+progress_error  = { fg = "red", bg = "black" }
+# : }}}
+
+# : File-specific styles {{{
+[filetype]
+rules = [
+	# Set everything to your specific color
+	{ name = "*", fg = "#d7dde8" },
+	{ name = "*/", fg = "#d7dde8" },
+	
+	# Special files (keeping background alerts for safety)
+	{ name = "*", is = "orphan", bg = "red", fg = "#d7dde8" },
+	{ name = "*", is = "dummy", bg = "red", fg = "#d7dde8" },
+	{ name = "*/", is = "dummy", bg = "red", fg = "#d7dde8" },
+]
+# : }}}
+
+# : Icons {{{
+[icon]
+globs = []
+dirs  = [
+	{ name = ".config", text = "" },
+	{ name = ".git", text = "" },
+	{ name = ".github", text = "" },
+	{ name = ".npm", text = "" },
+	{ name = "Desktop", text = "" },
+	{ name = "Development", text = "" },
+	{ name = "Documents", text = "" },
+	{ name = "Downloads", text = "" },
+	{ name = "Library", text = "" },
+	{ name = "Movies", text = "" },
+	{ name = "Music", text = "" },
+	{ name = "Pictures", text = "" },
+	{ name = "Public", text = "" },
+	{ name = "Videos", text = "" },
+]
+files = [
+	{ name = ".babelrc", text = "" },
+	{ name = ".bash_profile", text = "" },
+	{ name = ".bashrc", text = "" },
+	{ name = ".clang-format", text = "" },
+	{ name = ".clang-tidy", text = "" },
+	{ name = ".codespellrc", text = "󰓆" },
+	{ name = ".condarc", text = "" },
+	{ name = ".dockerignore", text = "󰡨" },
+	{ name = ".ds_store", text = "" },
+	{ name = ".editorconfig", text = "" },
+	{ name = ".env", text = "" },
+	{ name = ".eslintignore", text = "" },
+	{ name = ".eslintrc", text = "" },
+	{ name = ".git-blame-ignore-revs", text = "" },
+	{ name = ".gitattributes", text = "" },
+	{ name = ".gitconfig", text = "" },
+	{ name = ".gitignore", text = "" },
+	{ name = ".gitlab-ci.yml", text = "" },
+	{ name = ".gitmodules", text = "" },
+	{ name = ".gtkrc-2.0", text = "" },
+	{ name = ".gvimrc", text = "" },
+	{ name = ".justfile", text = "" },
+	{ name = ".luacheckrc", text = "" },
+	{ name = ".luaurc", text = "" },
+	{ name = ".mailmap", text = "󰊢" },
+	{ name = ".nanorc", text = "" },
+	{ name = ".npmignore", text = "" },
+	{ name = ".npmrc", text = "" },
+	{ name = ".nuxtrc", text = "󱄆" },
+	{ name = ".nvmrc", text = "" },
+	{ name = ".pre-commit-config.yaml", text = "󰛢" },
+	{ name = ".prettierignore", text = "" },
+	{ name = ".prettierrc", text = "" },
+	{ name = ".pylintrc", text = "" },
+	{ name = ".settings.json", text = "" },
+	{ name = ".SRCINFO", text = "󰣇" },
+	{ name = ".vimrc", text = "" },
+	{ name = ".zshrc", text = "" },
+	{ name = "Cargo.toml", text = "" },
+	{ name = "LICENSE", text = "" },
+	{ name = "README.md", text = "" },
+]
+exts = [
+	{ name = "7z", text = "" },
+	{ name = "ai", text = "" },
+	{ name = "asm", text = "" },
+	{ name = "bash", text = "" },
+	{ name = "bat", text = "" },
+	{ name = "c", text = "" },
+	{ name = "cpp", text = "" },
+	{ name = "css", text = "" },
+	{ name = "csv", text = "" },
+	{ name = "go", text = "" },
+	{ name = "html", text = "" },
+	{ name = "js", text = "" },
+	{ name = "json", text = "" },
+	{ name = "lua", text = "" },
+	{ name = "md", text = "" },
+	{ name = "py", text = "" },
+	{ name = "rs", text = "" },
+	{ name = "sh", text = "" },
+	{ name = "ts", text = "" },
+	{ name = "txt", text = "󰈙" },
+	{ name = "zip", text = "" },
+]
+conds = [
+	{ if = "dir", text = "" },
+	{ if = "exec", text = "" },
+	{ if = "!dir", text = "" },
+]
+# : }}}
