@@ -48,6 +48,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf --backend glx --vsync
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --backend glx --vsync --log-level=debug --log-file=/home/ravindufr/picom.log
 
+#clipbord demon
+exec --no-startup-id greenclip daemon  
 
 #dunst auto start
 exec --no-startup-id dunst
@@ -210,7 +212,8 @@ mode "resize" {
 
 bindsym $mod+x mode "resize"
 
-
+#clipboard keybind
+bindsym $mod+v exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 #                 _                  _          _   _             
 #                | |                (_)        | | (_)            
