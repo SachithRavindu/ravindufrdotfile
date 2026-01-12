@@ -4,6 +4,8 @@ configuration {
     show-icons: true;
     icon-theme: "Papirus";
     font: "SpaceMono Nerd Font Mono 10";
+    drun-display-format: "{name}";
+    disable-history: false;
 }
 
 

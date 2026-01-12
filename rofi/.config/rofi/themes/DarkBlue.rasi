@@ -41,7 +41,7 @@ window {
     padding:          5;
     children: [mainbox];
     border-radius:15px;
-    width:450px;
+    width:400px;
 }
 mainbox {
     border:  0;

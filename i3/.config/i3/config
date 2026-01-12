@@ -233,5 +233,5 @@ exec_always --no-startup-id feh --bg-scale ~/.config/wallpapers/vagabondw.png
 #        status_command i3status
 #}
 
-workspace 5 gaps horizontal 50
-workspace 5 gaps vertical 30
+gaps inner 7
+gaps outer 3
