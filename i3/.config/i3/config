@@ -1,6 +1,9 @@
 set $mod Mod4
 font pango:JetBrainsMono Nerd Font 9
 
+# Set wallpaper
+exec_always --no-startup-id feh --bg-scale ~/.config/wallpapers/car.jpg
+
 
 #	 __   ______                                        ______   __           
 #	/  | /      \                                      /      \ /  |          
@@ -226,8 +229,7 @@ bindsym $mod+v exec rofi -modi "clipboard:greenclip print" -show clipboard -run-
 #remove default border                                                                 
 default_border pixel 0
 
-# Set wallpaper
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpapers/vagabondw.png
+
 
 #bar {
 #        status_command i3status
